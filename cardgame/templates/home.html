@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock navbar %}
+
+{% block content %}
+
+<div id="home-content">
+  <h2> If you want to play the card game, click below </h2>
+  <br>
+
+  <a href="{{ url_for('game') }}" class="button"> Play Game! </a>
+  <br>
+</div>
+
+{% endblock content %}
+
+{% block sidebar %}
+
+{% include "accountbar.html" %}
+
+{% endblock sidebar %}

@@ -1,0 +1,173 @@
+/* Pre-built styles from template */
+
+.article-title {
+  color: #969696;
+}
+
+a.article-title:hover {
+  color: #020000;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #969696
+}
+
+.article-metadata a:hover {
+  color: #020000;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* My custom styles */
+
+body {
+  background: #fbfbfb;
+  color: #020000;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #020000;
+}
+
+h2 {
+  text-align: center;
+  font-family: cursive;
+  font-style: oblique;
+}
+
+.bg-steel {
+  background-color: #696969;
+  transition-duration: 0.8s;
+}
+
+.bg-steel:hover {
+  background-color: #585858;
+}
+
+.site-header .navbar-nav .nav-link {
+  transition-duration: 0.8s;
+  color: #6495ed;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #0000ff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  color: #fbfbfb;
+}
+
+.content-section {
+  background: #fbfbfb;
+  padding: 10px 20px;
+  border: 1.5px solid #020000;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+  background-color: #696969;
+  border: 0.5px groove #020000;
+  padding: 15px 32px;
+
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.8s;
+  width: 100%;
+  text-decoration: none;
+  color: #6495ed;
+}
+
+a.button:hover {
+  color: #0000ff;
+  background-color: #585858
+}
+
+#home-content {
+  border: none;
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%
+}
+
+#card-game {
+  color: #020000;
+  transition-duration: 1s;
+}
+
+#card-game:hover {
+  size: 5px;
+}
+
+#p1c {
+  width: 49%;
+  padding: 10px;
+}
+
+#p1n {
+  width: 49%;
+  padding: 10px;
+}
+
+#p2c {
+  width: 49%;
+  float: right;
+  padding: 10px;
+}
+
+#p2n {
+  width: 49%;
+  float: right;
+  padding: 10px;
+}
+
+/*
+#submit-p1 {
+
+}
+*/
+
+#submit-p2 {
+  float: right;
+}
+
+#round, #scores {
+  font-family: cursive;
+  color: #6495ed;
+  text-align: center;
+}

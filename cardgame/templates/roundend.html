@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock navbar %}
+
+{% block content %}
+
+<div id="winnerdiv">
+  <h1 id="round"> Round: {{ cycle }} </h1>
+  <h2> Player 1's card: {{ player_1_card }} </h2>
+  <h2> Player 2's card: {{ player_2_card }} </h2>
+  <h2> Round winner: {{ winner }}! </h2>
+  <br>
+
+  <a href="{{ url_for('game') }}" class="button"> Return To Game! </a>
+  <br>
+</div>
+
+{% endblock content %}
+
+{% block sidebar %}
+
+{% with player_1_score = player_1_score, player_2_score = player_2_score %}
+  {% include "roundboard.html" %}
+{% endwith %}
+
+{% endblock sidebar %}

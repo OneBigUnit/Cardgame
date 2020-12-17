@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock navbar %}
+
+{% block content %}
+
+<div id="gamewindiv">
+  <h1 id="round"> Game Over! </h1>
+  <h2> Game Winner: {{game_winner}} </h2>
+  <br>
+
+  <a href="{{ url_for('home') }}" class="button"> Return To Main Menu! </a>
+  <br>
+
+</div>
+
+{% endblock content %}
+
+{% block sidebar %}
+
+{% with player_1_score = player_1_score, player_2_score = player_2_score %}
+  {% include "gameboard.html" %}
+{% endwith %}
+
+{% endblock sidebar %}
