@@ -8,23 +8,51 @@
 
 {% block content %}
 
-<div id="winnerdiv">
-  <h1 id="round"> Round: {{ cycle }} </h1>
-  <h2> Player 1's card: {{ player_1_card }} </h2>
-  <h2> Player 2's card: {{ player_2_card }} </h2>
-  <h2> Round winner: {{ winner }}! </h2>
-  <br>
+{% if result[0] %}
 
-  <a href="{{ url_for('game') }}" class="button"> Return To Game! </a>
-  <br>
-</div>
+    <div id="winnerdiv">
+      <h1 id="round"> Round: {{ result[1] }} </h1>
+      <h2> {{ result[3] }}'s card: {{ result[5] }} </h2>
+      <h2> {{ result[4] }}'s card: {{ result[6] }} </h2>
+      <h2> Round winner: {{ result[2] }}! </h2>
+      <br>
+
+      <a href="{{ url_for('game.play', start=False) }}" class="button"> Next Round! </a>
+      <br>
+    </div>
+
+{% else %}
+
+    <div id="gamewinnerdiv">
+      <h1 id="gamewinner"> Game Winner: {{ result[1] }} </h1>
+      <br>
+
+      <h2> {{ result[2] }}'s final score: {{ result[4] }} </h2>
+      <h2> {{ result[3] }}'s final score: {{ result[5] }} </h2>
+      <br>
+
+      <a href="{{ url_for('main.home') }}" class="button"> End Game! </a>
+      <br>
+    </div>
+
+{% endif %}
 
 {% endblock content %}
 
 {% block sidebar %}
 
-{% with player_1_score = player_1_score, player_2_score = player_2_score %}
-  {% include "roundboard.html" %}
-{% endwith %}
+{% if result[0] %}
+
+  {% with player_1_score = result[7], player_2_score = result[8] %}
+    {% include "roundboard.html" %}
+  {% endwith %}
+
+{% else %}
+
+  {% with player_1_score = result[4], player_2_score = result[5] %}
+    {% include "roundboard.html" %}
+  {% endwith %}
+
+{% endif %}
 
 {% endblock sidebar %}

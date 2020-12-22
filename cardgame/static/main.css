@@ -156,17 +156,11 @@ a.button:hover {
   padding: 10px;
 }
 
-/*
-#submit-p1 {
-
-}
-*/
-
 #submit-p2 {
   float: right;
 }
 
-#round, #scores {
+#round, #scores, #gamewinner {
   font-family: cursive;
   color: #6495ed;
   text-align: center;
