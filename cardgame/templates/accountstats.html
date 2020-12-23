@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+
+{% include "navbar.html" %}
+
+{% endblock navbar %}
+
+{% block content %}
+
+<h1 class="statsheader"> As Player 1, you have: </h1>
+<br>
+
+<ul>
+    <li><h1 class="gamewins"> {{ user.p1_wins }} Game Wins </h1></li>
+    <li><h1 class="gamelosses"> {{ user.p1_losses }} Game Losses </h1></li>
+
+    <li><h1 class="roundwins"> {{ user.p1_rounds_won }} Round Wins </h1></li>
+    <li><h1 class="roundlosses"> {{ user.p1_rounds_lost }} Round Losses </h1></li>
+
+    <li><h1 class="pointspb"> A PB of {{ user.p1_record_points }} Points in a game </h1></li>
+</ul>
+
+<br>
+<br>
+
+
+<h1 class="statsheader"> As Player 2, you have: </h1>
+<br>
+
+<ul>
+    <li><h1 class="gamewins"> {{ user.p2_wins }} Game Wins </h1></li>
+    <li><h1 class="gamelosses"> {{ user.p2_losses }} Game Losses </h1></li>
+
+    <li><h1 class="roundwins"> {{ user.p2_rounds_won }} Round Wins </h1></li>
+    <li><h1 class="roundlosses"> {{ user.p2_rounds_lost }} Round Losses </h1></li>
+
+    <li><h1 class="pointspb"> A PB of {{ user.p1_record_points }} Points in a game </h1></li>
+</ul>
+
+{% endblock content %}
+
+{% block sidebar %}
+
+{% include "accountbar.html" %}
+
+{% endblock sidebar %}

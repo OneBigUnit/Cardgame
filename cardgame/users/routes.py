@@ -1,10 +1,11 @@
 from flask import Blueprint
 from flask import render_template, url_for, flash, redirect, request
+from flask_login import login_user, current_user, logout_user, login_required
+
 from cardgame import db, bcrypt
+from cardgame.models import User
 from cardgame.users.forms import RegistrationForm, LoginForm, UpdateAccountForm, RequestResetForm, ResetPasswordForm
 from cardgame.users.utils import save_picture, send_reset_email
-from cardgame.models import User
-from flask_login import login_user, current_user, logout_user, login_required
 
 users = Blueprint("users", __name__)
 
@@ -99,16 +100,7 @@ def account():
                            image_file=image_file, form=form)
 
 
-@users.route("/account1")
-def account1():
-    return render_template("account1.html", title="Account Link 1")
-
-
-@users.route("/account2")
-def account2():
-    return render_template("account2.html", title="Account Link 2")
-
-
-@users.route("/account3")
-def account3():
-    return render_template("account3.html", title="Account Link 3")
+@users.route("/account_statistics")
+@login_required
+def account_stats():
+    return render_template("accountstats.html", title="Account Statistics", user=current_user)

@@ -13,3 +13,8 @@ def home():
 @main.route("/about")
 def about():
     return render_template("about.html", title="About Page")
+
+
+@main.route("/help")
+def user_help():
+    return render_template("help.html", title="Card Game Help")

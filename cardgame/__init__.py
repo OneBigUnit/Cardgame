@@ -1,10 +1,10 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-from cardgame.config import Config
+from flask_sqlalchemy import SQLAlchemy
 
+from cardgame.config import Config
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -31,3 +31,9 @@ def create_app(config_class=Config):
     app.register_blueprint(game)
 
     return app
+
+
+def recreate_databases(app):
+    app.app_context().push()
+    db.drop_all()
+    db.create_all()

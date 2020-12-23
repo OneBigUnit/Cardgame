@@ -160,8 +160,14 @@ a.button:hover {
   float: right;
 }
 
-#round, #scores, #gamewinner {
+#round, #scores, #gamewinner, .statsheader {
   font-family: cursive;
   color: #6495ed;
   text-align: center;
+}
+
+.gamewins, .gamelosses, .roundwins, .roundlosses, .pointspb, #aboutheader {
+    font-family: cursive;
+    text-align: center;
+    color: #020000;
 }

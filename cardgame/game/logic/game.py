@@ -1,9 +1,10 @@
-from cardgame.game.logic.components.exceptions import DeckDepleted
-from cardgame.game.logic.components.cards import Cards
-from cardgame.game.logic.components.player import Player
-from cardgame.game.logic.components.context_managers import OpenMyPath
-from cardgame.game.logic.components.adts import Queue
 import json
+
+from cardgame.game.logic.components.adts import Queue
+from cardgame.game.logic.components.cards import Cards
+from cardgame.game.logic.components.context_managers import OpenMyPath
+from cardgame.game.logic.components.exceptions import DeckDepleted
+from cardgame.game.logic.components.player import Player
 
 
 class Game:
@@ -23,6 +24,9 @@ class Game:
                 break
 
         self.determine_game_winner(self)
+
+        for player in self.players:
+            player.update_user_info(self.game_winner)
 
         yield self.display_game_winner(self)
 
@@ -51,7 +55,7 @@ class Game:
     def create_players(self, number=2):
         players = []
         for i in range(1, number + 1):
-            players.append(Player(f"Player {i}", self.deck))
+            players.append(Player(f"Player {i}"))
         return players
 
     def increment_round_counter(self):

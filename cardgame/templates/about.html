@@ -8,6 +8,19 @@
 
 {% block content %}
 
-<h1> About </h1>
+<h4 id="aboutheader"> This web application is dedicated to my GCSE Card Game Project.
+    The logic behind the Card Game can be found below </h4>
+<br>
+
+<iframe height="400px" width="100%"
+        src="https://repl.it/@KieranLock/Card-Game-Logic?lite=true&outputonly=true"
+        scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 {% endblock content %}
+
+{% block sidebar %}
+
+{% include "accountbar.html" %}
+
+{% endblock sidebar %}
