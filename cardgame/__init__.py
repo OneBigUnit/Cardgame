@@ -33,7 +33,8 @@ def create_app(config_class=Config):
     return app
 
 
-def recreate_databases(app):
+def setup_db():
+    app = create_app()
     app.app_context().push()
     db.drop_all()
     db.create_all()

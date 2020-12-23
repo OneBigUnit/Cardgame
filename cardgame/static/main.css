@@ -166,7 +166,7 @@ a.button:hover {
   text-align: center;
 }
 
-.gamewins, .gamelosses, .roundwins, .roundlosses, .pointspb, #aboutheader {
+.gamewins, .gamelosses, .roundwins, .roundlosses, .pointspb, #aboutheader{
     font-family: cursive;
     text-align: center;
     color: #020000;
