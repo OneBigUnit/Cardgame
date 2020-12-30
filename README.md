@@ -51,7 +51,6 @@ Please do not alter any code, else the web application may be liable to failure.
 - OOP Inheritance: https://github.com/OneBigUnit/Cardgame/blob/main/cardgame/models.py - Line 13
 - ADTs: https://github.com/OneBigUnit/Cardgame/blob/main/cardgame/game/logic/components/adts.py - Lines 1 - 30 / 33 - 54
 - Packages / Libraries: https://github.com/OneBigUnit/Cardgame/blob/main/cardgame/__init__.py - Line 1 - 5
-- Web APIs: https://github.com/OneBigUnit/Cardgame/blob/main/cardgame/config.py - Lines 4 - 11   ("Flask-Mail is configured through the standard Flask Config API")
 - DBMS: https://github.com/OneBigUnit/Cardgame/blob/main/cardgame/__init__.py - Line 9
 
 **Other Techniques:**
